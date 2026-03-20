@@ -239,6 +239,7 @@
     height: 451px;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     outline: none;
