@@ -4,17 +4,24 @@
 
 /* CSS Custom Properties (Design Tokens) */
 :root {
-    /* Colors — placeholders until design is shared */
-    --color-primary: #0077b6;
-    --color-primary-dark: #005f8e;
+    /* Colors */
+    --color-primary: #5E83AE;
+    --color-primary-dark: #4a6a93;
+    --color-primary-light: #7a9dc4;
+    --color-secondary: #F9F5ED;
+    --color-third: #2A2A2A;
+
     --color-bg: #ffffff;
-    --color-bg-secondary: #f5f7fa;
-    --color-text: #1a1a2e;
+    --color-bg-secondary: #F9F5ED;
+    /* secondary */
+    --color-text: #2A2A2A;
+    /* third */
     --color-text-muted: #6b7280;
     --color-border: #e5e7eb;
 
     /* Typography */
-    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-primary: 'Rosario', system-ui, -apple-system, sans-serif;
+    --font-secondary: 'MuseoModerno', system-ui, sans-serif;
     --font-size-base: 1rem;
     --line-height-base: 1.6;
 
@@ -41,12 +48,21 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-primary);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     color: var(--color-text);
     background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-secondary);
 }
 
 img,
@@ -56,6 +72,22 @@ canvas,
 svg {
     display: block;
     max-width: 100%;
+}
+
+article,
+section,
+aside {
+    outline: none;
+    border: none;
+}
+
+/* Elimina outlines de scroll snap en todos los browsers */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus-visible {
+    outline: none;
 }
 
 a {

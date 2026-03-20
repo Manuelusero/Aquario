@@ -1,21 +1,296 @@
 .page {
-    /* Page wrapper */
+    background-color: var(--color-secondary);
 }
 
+/* ── HERO ── */
 .hero {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 6rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 1.5rem 60px;
+    overflow: hidden;
+}
+
+/* Blob — SVG desde public */
+.blob {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 482px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+    opacity: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tag {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 45px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-primary);
+    letter-spacing: 0;
+    margin-bottom: 36px;
+}
+
+.heading {
+    font-family: var(--font-secondary);
+    font-size: 36px;
+    line-height: 56px;
+    height: 171px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+}
+
+.headingBlue {
+    color: var(--color-primary);
+}
+
+.headingWhite {
+    color: #ffffff;
+}
+
+.subtitle {
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--color-text);
+    max-width: 320px;
+    margin-bottom: 36px;
+}
+
+.ctaBtn {
+    width: 193px;
+    height: 41px;
+    padding: 10px 8px;
+    gap: 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 252, 249, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.ctaBtn:hover {
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.scrollLabel {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+}
+
+.serviciosTitle {
+    display: inline-block;
+    border: 2px solid var(--color-text);
+    border-radius: 10px;
+    padding: 0.6rem 2rem;
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--color-text);
     text-align: center;
 }
 
-.hero h1 {
-    font-size: clamp(2rem, 5vw, 4rem);
-    color: var(--color-primary);
-    margin-bottom: 1rem;
+/* ── SERVICIOS ── */
+.services {
+    background-color: var(--color-secondary);
+    padding: 42px 1.25rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 43px;
+    scroll-margin-top: 64px;
 }
 
-.hero p {
-    font-size: 1.25rem;
-    color: var(--color-text-muted);
+.servicesTitle {
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--color-text);
+    text-align: center;
+    width: 100%;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 348px;
+    max-width: 400px;
+    min-height: 158px;
+    box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.25);
+    opacity: 1;
+}
+
+.cardTitle {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.cardText {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: var(--color-text);
+    margin-left: 37px;
+}
+
+/* ── PROYECTOS ── */
+.projects {
+    position: relative;
+    background-color: var(--color-secondary);
+    padding: 42px 0 3rem;
+    overflow: hidden;
+    scroll-margin-top: 64px;
+}
+
+.projectsBlur {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 499px;
+    height: 430px;
+    transform: rotate(180deg);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 1;
+}
+
+.projectsHeader {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 42px;
+    margin: 0 1.25rem;
+}
+
+.projectsTitle {
+    display: inline-block;
+    border: 2px solid var(--color-text);
+    border-radius: 10px;
+    padding: 0.6rem 2rem;
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.projectsCarousel {
+    position: relative;
+    z-index: 1;
+    height: 451px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    outline: none;
+    margin: 2rem auto 1.5rem;
+    width: 348px;
+}
+
+.projectsCarousel::-webkit-scrollbar {
+    display: none;
+}
+
+.projectCard {
+    width: 348px;
+    height: 451px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.projectImg {
+    width: 348px;
+    height: 451px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    pointer-events: none;
+}
+
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 0.25rem;
+}
+
+.projectName {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: 0.02em;
+}
+
+.projectType {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text);
 }
