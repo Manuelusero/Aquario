@@ -1,0 +1,15 @@
+.page {
+    /* Page wrapper */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.container h1 {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}

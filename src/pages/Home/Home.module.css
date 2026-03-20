@@ -1,0 +1,21 @@
+.page {
+    /* Page wrapper */
+}
+
+.hero {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+}
